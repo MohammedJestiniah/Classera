@@ -10,5 +10,6 @@
         ));
     ?>
     </fieldset>
+<?php echo $this->Html->link('Registered already?', 'http://localhost/cakephp/users/login'); ?>
 <?php echo $this->Form->end(__('Submit')); ?>
 </div>
