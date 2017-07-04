@@ -1,4 +1,4 @@
-//app/View/Users/login.ctp
+<!-- // app/View/Users/login.ctp -->
 
 <div class="users form">
 <?php echo $this->Flash->render('auth'); ?>
@@ -12,4 +12,5 @@
     ?>
     </fieldset>
 <?php echo $this->Form->end(__('Login')); ?>
+
 </div>
