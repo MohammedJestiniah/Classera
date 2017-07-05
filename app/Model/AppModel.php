@@ -30,4 +30,13 @@ App::uses('Model', 'Model');
  * @package       app.Model
  */
 class AppModel extends Model {
+
+	public $validate = array(
+        'title' => array(
+            'rule' => 'notBlank'
+        ),
+        'body' => array(
+            'rule' => 'notBlank'
+        )
+    );
 }
