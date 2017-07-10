@@ -2,6 +2,7 @@
 
 <!-- File: /app/View/Posts/view.ctp -->
 
+<!-- <?php print("<pre>".print_r($post,true)."</pre>"); ?> -->
 <h1><?php echo h($post['Post']['title']); ?></h1>
 
 <p><small>Created: <?php echo $post['Post']['created']; ?></small></p>
@@ -24,7 +25,7 @@
     <div>
         <h3><?=$comment['title']?></h3> 
         <p><?=$comment['body']?></p>
-        <p><small><?='Created by: '.$comment['user_id']?></small></p>
+        <p><small><?='Created by: '.$comment['User']['username']?></small></p>
         <p><small><?='Created at: '.$comment['created'].', Modified at: '.$comment['modified']?></small></p>
         <hr>
     </div>

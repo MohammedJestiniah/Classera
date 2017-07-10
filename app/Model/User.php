@@ -4,6 +4,17 @@ App::uses('AppModel', 'Model');
 App::uses('BlowfishPasswordHasher', 'Controller/Component/Auth');
 
 class User extends AppModel {
+
+ 	public $hasMany = array(
+        'Comment' => array(
+            'className' => 'Comment',
+            'conditions' => array('user_id'),
+            'order' => 'Comment.created DESC'
+        )
+    );
+
+
+
 	public function beforeSave($options = array()) {
     if (isset($this->data[$this->alias]['password'])) {
         $passwordHasher = new BlowfishPasswordHasher();

@@ -13,6 +13,8 @@ class PostsController extends AppController {
             throw new NotFoundException(__('Invalid post'));
         }
 
+
+        $this->Post->recursive=2 ;
         $post = $this->Post->findById($id);
         if (!$post) {
             throw new NotFoundException(__('Invalid post'));
@@ -30,7 +32,7 @@ class PostsController extends AppController {
         }
     }
 }
-/*
+
     public function edit($id = null) {
     if (!$id) {
         throw new NotFoundException(__('Invalid post'));
@@ -72,7 +74,8 @@ class PostsController extends AppController {
 
     return $this->redirect(array('action' => 'index'));
 }
-*/
+
+
 public function isAuthorized($user) {
     // All registered users can add posts
     if ($this->action === 'add') {

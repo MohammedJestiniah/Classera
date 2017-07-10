@@ -1,7 +1,9 @@
 <!-- File: /app/View/Posts/index.ctp -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <h1>Blog posts</h1>
-<p><?php echo $this->Html->link('Add Post', array('action' => 'add')); ?></p>
+<p style="display:inline"><?php echo $this->Html->link('Add Post', array('action' => 'add')); ?></p>
+<button type="button" style="float: right;"><?php echo $this->Html->link('Logout', array( 'controller' => 'users', 'action' => 'logout')); ?></button>
 <table>
     <tr>
         <th>Id</th>
